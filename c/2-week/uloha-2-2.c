@@ -1,3 +1,6 @@
+// uloha-2-2.c -- Tyzden 2 - Uloha 2
+// Michal Slovik, 29.9.2014 19:03:10
+
 #include <stdio.h>
 #include <stdlib.h>
 #define MAX 30000
@@ -62,8 +65,8 @@ int main()
 						vkladanie = 1;
 					}
 				}
-			} // koniec WHILE 
-		} //tu konci FOR
+			}
+		}
 	printf("%d\n",x+1);
 	for (i=0; i < x+1; i++) {
 		for(j = min[i] ; j <= max[i]; j++) {
@@ -71,7 +74,6 @@ int main()
 		}
 		printf("\n");
 	}
-// vynulovanie pouzivanych hodnôt
 	i=0; j=0; pomoc=0; aktual=0;
 	for(i=0; i<N; i++) {
 		field[i]=0;

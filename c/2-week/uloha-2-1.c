@@ -3,7 +3,6 @@
 #include <string.h>
 #include <ctype.h>
 
-
 #define TRUE 1
 #define FALSE 0
 #define MAX 10000
@@ -42,7 +41,6 @@ char popFromStack(char stack[MAX])
 		return tmp; // top - 1, pretoze za kazdy znak dava \0
 	}
 	else{ 
-		//	printf("Error");
 		return FALSE;
 	}
 }
@@ -52,8 +50,7 @@ char topOfStack(char stack[MAX])
 	return stack[top-1];
 }
 
-//funkcia na zistovanie priority operatorov
-int prior(char znak) { 
+int prior(char znak) {
 	switch(znak) {
 	case '(' : return 0; // nízka priorita
 	case '+' :
@@ -105,22 +102,19 @@ int main()
 							tmpChar = popFromStack(stack);
 							printf("%c", tmpChar);
 						}
-						//a vloz do zasobnika
 						pushToStack(stack,pole[i]);
 					}
 				}
 			}
 			i++;
-		} //koniec jedneho vyrazu
+		}
 
-		//ked nacital cely vyraz vypis zasobnik
 		while(IsEmpty(stack) != 1) {
 			tmpChar = popFromStack(stack);
 			printf("%c",tmpChar);
 		}
 		printf("\n");
-	}//koniec celeho cyklu
-
+	}
 
 	printf("\n");
 	return 0;
